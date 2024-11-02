@@ -1,0 +1,64 @@
+
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: pink;
+            line-height: 1.65;
+            padding-bottom: 1000px;
+            display: flex;
+        }
+        .sidebar-satu{
+            width: 100px;
+            padding: 30px;
+            flex: 1;
+            background-color: lightblue;
+        }
+        .container-satu{
+            width: 800px;
+            margin: 50px auto;
+            background-color: bisque;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+        }
+        .kolom-utama{
+            flex: 1.5;
+            text-align: left;
+            width: 200px;
+            padding: 30px;
+            background-color: lightpink;
+        }
+        .sidebar-dua{
+            flex: 1;
+            width: 200px;
+            padding: 30px;
+            background-color: lightgoldenrodyellow ;
+        }
+        .container-satu h1{
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        ul li{
+            margin-bottom: 8px;
+            text-align: center;
+            background-color: lightblue;
+        }
+        a{
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .container-satu p{
+            margin-bottom: 20px;
+        }
+        .container-satu .kolom-utama ul {
+            list-style: none;
+            padding: 0;
+        }
+   

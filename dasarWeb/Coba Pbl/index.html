@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Akademik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c1c9d4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2563eb;
+            font-size: 100px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .button {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .jpeg-content {
+            width: 50%;
+            height: 10%;
+            border-radius: 10px;
+            margin-top: 0.5rem;
+        }
+
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-header h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .container-header {
+            background-color: #2563eb;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            font-size: 20px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .container-footer {
+            background-color: #2563eb;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            font-size: 14px;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            background-color: #1d4ed8;
+            color: white;
+            position: fixed;
+            top: 60px; /* Adjust to align with header */
+            left: 0;
+            width: 200px;
+            height: calc(100% - 60px); /* Fill height except for header */
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            font-size: 18px;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 10px;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #2563eb;
+        }
+
+        .main-content {
+            margin-left: 220px; /* Adjust to align with sidebar */
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Form Login -->
+    <div class="login-container" id="login-form">
+        <div class="login-header">
+            <h2>SIPRESMA</h2>
+            <img src="jti.png" class="jpeg-content">
+            <p>Masukkan Username dan Password</p>
+        </div>
+        <form action="javascript:void(0);" onsubmit="loginUser()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="button">Masuk</button>
+        </form>
+    </div>
+
+    <div id="dashboard" style="display: none;">
+        <div class="container-header">
+            Portal Akademik Dashboard
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Dashboard</h3>
+            <ul>
+                <li><a href="#">Riwayat Prestasi Mahasiswa</a></li>
+                <li><a href="#">Tambahkan Prestasi</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="container">
+                <!-- Mahasiswa Section -->
+                <section id="mahasiswa" style="display: none;">
+                    <h2>Mahasiswa</h2>
+                    <button class="button">Tambah Prestasi</button>
+                </section>
+
+                <!-- Dosen Section -->
+                <section id="dosen" style="display: none;">
+                    <h2>Dosen</h2>
+                    <button class="button">Input Nilai Mahasiswa</button>
+                </section>
+
+                <!-- Admin Section -->
+                <section id="admin" style="display: none;">
+                    <h2>Admin</h2>
+                    <button class="button">Rekapan Transkrip Nilai</button>
+                    <button class="button">Rekap Prestasi Non Akademik</button>
+                </section>
+
+                <!-- Super Admin Section -->
+                <section id="superadmin" style="display: none;">
+                    <h2>Super Admin</h2>
+                    <button class="button">Menu Validasi Prestasi</button>
+                    <button class="button">Filter Prestasi</button>
+                    <button class="button">Cetak Laporan</button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loginUser() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            let userType;
+
+            if (username == "123") {
+                userType = 'mahasiswa'
+            } else if (username == "456") {
+                userType = 'dosen'
+            } else if (username == "789") {
+                userType = 'admin'
+            } else {
+                alert("Username Tidak Valid");
+                return;
+            }
+
+            if (username && password) {
+                document.getElementById('login-form').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                showSection(userType);
+            } else {
+                alert("Username dan Password Harus Diisi");
+            }
+        }
+
+        function showSection(userType) {
+            const sections = document.querySelectorAll('#dashboard .container section');
+            sections.forEach(section => section.style.display = 'none');
+
+            const selectedSection = document.getElementById(userType);
+            if (selectedSection) selectedSection.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

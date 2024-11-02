@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white; /* Warna latar belakang */
+}
+
+.form-container {
+    border: 2px solid rgb(215, 45, 102); /* Warna tepian hijau */
+    padding: 20px;
+    border-radius: 10px; /* Membuat tepian lebih membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek 3D */
+    max-width: 300px;
+    width: 100%;
+    background-color: pink; /* Warna latar belakang form */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: palevioletred; /* Warna teks label */
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid pink; /* Warna tepian input */
+    border-radius: 5px; /* Membuat tepian input lebih membulat */
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #4CAF50; /* Warna tepian input saat fokus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Efek bayangan fokus */
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: #4CAF50; /* Warna latar tombol */
+    color: pink;
+    border: none;
+    border-radius: 5px; /* Membuat tepian tombol lebih membulat */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #45a049; /* Warna tombol saat di-hover */
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4CAF50; /* Warna teks hasil */
+    text-align: center;
+}
