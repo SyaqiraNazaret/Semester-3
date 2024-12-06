@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengenalan Bootstrap</title>
+    <!-- Menyisipkan Bootstrap -->
+     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Menyisipkan Java Script -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <style>
+     body {
+        background-color: #ffcccb;
+    }
+    .jumbotron {
+        background-color: #c6e0fb;
+        color: white;
+    }
+    .navbar {
+        margin-bottom: 30px;
+    }
+    .rounded-circle {
+        width: 150px;
+        height: 150px;
+    }
+    .footer {
+        background-color: #343a40;
+        color: white;
+        padding: 20px ;
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Tugas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavabr">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/SyaqiraNaaret">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/sqrnzr_">Instagram</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="//wa.me/6285230208120">Contact Me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Selamat Datang di WeKu !_!</h1>
+            <p>Salam kenal Semuanya! ini adalah Website Ku atau bisa disebut dengan WeKu <br>website ini dibuat untuk memenuhi tugas Praktikum 10</p>
+        </div>
+        <p>Mata Kuliah Pemrograman Web</p>
+    </div>
+    <div class="container">
+        <div class="row row-cols-1">
+            <div class="col">
+                <img src="profileKu.jpg" class="rounded-circle" alt="gambar circle">
+            </div>
+        </div>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+          <!-- About Me Section -->
+    <div class="container mt-5">
+        <h2 class="text-center">About Me</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 text-center">
+                <h4>Syaqira Nazaretna</h4>
+                <p>Mahasiswa Sistem Informasi Bisnis <br> Politeknik Negeri Malang Tahun 2024</p>
+            </div>
+            <div class="col-lg-8 col-md-6">
+                <p>Halo! Saya Syaqira Nazaretna, seorang mahasiswa yang sedang belajar dan mendalami pemrograman web. Website ini merupakan salah satu tugas yang harus saya selesaikan di mata kuliah Pemrograman Web.</p>
+                <p>Saya juga suka mempelajari hal-hal baru di dunia teknologi dan memiliki ketertarikan dalam pengembangan aplikasi berbasis web.</p>
+                <p>Jangan lupa untuk mengunjungi profil Instagram dan WhatssApp saya!</p>
+            </div>
+        </div>
+    </div>
+        <div class="footer">
+            <p>&copy;2024 Syaqira Nazaretna - 2341760123</p>
+            <p>Praktikum 10: Bootstrap-Pemrograman Web</p>
+        </div>
+    </div>
+</body>
+</html>
